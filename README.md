@@ -8,8 +8,7 @@ The prompts will give unique responses to which answer you give when generating 
 
 ##Installation:
 
-Go to this site ==>
-
+Go to this site ==> https://graycoded.github.io/password_gen1/
 
 ##Usage:
 
