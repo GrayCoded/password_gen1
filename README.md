@@ -15,17 +15,17 @@ Go to this site ==>
 
 Once on the site select the “generate password” button to start
 
-![](/Assets/ScreenShots/Img_1.png)
+![](/Assets/ScreenShots/Img_1.jpg)
 
 Now that you have done this you will be presented with 5 prompts used to build the criteria for your password.
 
 ![](/Assets/ScreenShots/Img_2.jpg)
-![](/Assets/ScreenShots/Img_3.png)
-![](/Assets/ScreenShots/Img_4.png)
-![](/Assets/ScreenShots/Img_5.png)
-![](/Assets/ScreenShots/Img_6.png)
-![](/Assets/ScreenShots/Img_6.png)
-![](/Assets/ScreenShots/Img_7.png)
+![](/Assets/ScreenShots/Img_3.jpg)
+![](/Assets/ScreenShots/Img_4.jpg)
+![](/Assets/ScreenShots/Img_5.jpg)
+![](/Assets/ScreenShots/Img_6.jpg)
+![](/Assets/ScreenShots/Img_6.jpg)
+![](/Assets/ScreenShots/Img_7.jpg)
 
 
 Once the prompts are completed by selecting a “ok” or “cancel” on the corresponding prompts a password will be generated.
