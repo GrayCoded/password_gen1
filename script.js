@@ -1,4 +1,3 @@
-
 var passLength = 8;
 var choice = [];
 
@@ -11,38 +10,61 @@ var specialCharacters = ["!","@","#","$","%","^","&","*","?",];
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  if (correctPrompts) {
-    var newpassword = generatePassword();
-    passwordText.value = newpassword
-  } else {
-    passwordTest.value = "";
-  }
-
-  passwordText.value = password;
-
-}
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Write password to the #password input
+function writePassword() {
+  var correctPrompts = getPrompts(); 
+  var passwordText = document.querySelector("#password");
+
+  if (correctPrompts) {
+      var Password = generatePassword();
+      passwordText.value = Password;
+  } 
+}
 
 function generatePassword() {
-  var password = "";
-  for(var i = 0; < characterLength; i++) {
-    var random
+  var password = ("");
+  for(var i = 0; i < passLength; i++) {
+      var randomizer = Math.floor(Math.random() * choice.length);
+      password = password + choice[randomizer]
   }
+  return password;
+
 }
 
 
-function getPrompts(){
-  passLength = parseInt(prompt("How many charcters would you like your generated password to be?" + "Must be bewteen 8 - 128 charcters"));
 
-  if(isNaN(passLength) || passLength < 8 || passLength > 128) {
-    alert("Password must be a number, 8 - 128 characters.")
+function getPrompts(){
+  choice = [];
+
+  passLength = parseInt(prompt("How many characters would you like your generated password to be? (Must be bewteen 8 - 128 charcters)"));
+
+  if (isNaN(passLength)) {
+    alert("Password length must be wrote as a number,")
+    return false;
   }
+  if (passLength > 128) {
+    alert("Password length must be shorter than 128 characters.")
+    return false;
+  }
+  if (passLength < 8) {
+    alert("Password must be greater than 8 characters.")
+    return false;
+  }
+
+  if (confirm("Would you like lowercase letters in your password?")) {
+    choice = choice.concat(lowerCase);
+  }
+  if (confirm("Would you like uppercase letters in your password?")) {
+    choice = choice.concat(upperCase);
+  }
+  if (confirm("Would you like numbers letters in your password?")) {
+    choice = choice.concat(numbers);
+  }
+  if (confirm("Would you like special characters letters in your password?")) {
+    choice = choice.concat(specialCharacters);
+  }
+  return true;
 }
